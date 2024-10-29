@@ -1,0 +1,111 @@
+.custom-navbar {
+    background: linear-gradient(90deg, rgba(0, 128, 0, 1) 0%, rgba(0, 255, 0, 1) 100%); /* Green gradient */
+    backdrop-filter: blur(15px);
+    /* border-radius: 10px; */
+    padding: 10px 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease;
+}
+
+.navbar-brand img {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff; 
+    margin-right: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Arial Black", sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+    transform: rotate(360deg);
+}
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    background-color: #ffeb3b; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffeb3b; 
+}
+
+.navbar-nav .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.dropdown-menu {
+    background-color: rgba(40, 40, 40, 0.9);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 12px 20px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background-color: #ffeb3b; 
+    color: #212121;
+}
+
+.custom-btn {
+    background-color: #00ffd0; 
+    color: #212121;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #ffeb3b; 
+    color: #212121;
+    box-shadow: 0 0 10px rgba(0, 255, 208, 0.6);
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+}

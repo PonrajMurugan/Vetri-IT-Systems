@@ -1,0 +1,177 @@
+.vis-container {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.title-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.title-text {
+    font-size: 3rem;
+    /* font-weight: 700; */
+    color: #333;
+    /* margin: 0; */
+    position: relative;
+    /* margin-top: 15px; */
+    color:green;
+    font-family: "Squada One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: slide 2s ease-in-out infinite;
+
+   
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #00bfa5; 
+    margin: 8px auto 0;
+    transition: width 0.4s ease;
+}
+
+.title-container:hover .underline {
+    width: 120px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    margin: 50px 0; 
+}
+
+.logo-item {
+    position: relative;
+    width: 500px; 
+    /* overflow: hidden;  */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.company-logo {
+    width: 100%; 
+    height: auto;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.logo-item:hover .company-logo {
+    /* transform: scale(1.1); */
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    /* transform: translateY(10px); */
+}
+
+.logo-item:hover .overlay {
+    opacity: 1; 
+    /* transform: translateY(0);  */
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+
+.text {
+    color:#39fe81;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    /* transform: scale(0.8);  */
+    transition: transform 0.5s ease-in-out;
+    font-weight: 700;
+}
+
+.logo-item:hover .text {
+    transform: scale(1);
+     cursor: pointer;
+}
+
+.company-logo {
+    width: 450px;
+    height: 35vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    margin-bottom: 30px; */
+    border-radius: 10px;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9); */
+    filter: blur(3px);
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-text {
+    font-size: 1.3rem;
+    color: black;
+    line-height: 1.8;
+    text-align: justify;
+    /* font-weight: 500; */
+    font-family: "Unna", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.arrow-icon {
+    color: #00bfa5;
+    font-size: 1.5rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .title-text {
+        font-size: 1.5rem;
+    }
+
+    .company-logo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-text {
+        font-size: 0.9rem;
+    }
+
+    .company-logo {
+        width: 80px;
+    }
+}
+
+

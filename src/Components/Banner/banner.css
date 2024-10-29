@@ -1,0 +1,169 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 75vh; 
+    overflow: hidden;
+    border-radius: 15px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 130px;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: brightness(0.5); 
+    animation: zoomIn 10s infinite alternate; 
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    transition: background 0.5s ease; 
+}
+
+.banner:hover .banner-overlay {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    animation: fadeIn 1s ease; 
+    animation-delay: 0s; 
+}
+
+.banner-title {
+    font-size: 3.5em; 
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); 
+    animation: slideIn 1s ease forwards; 
+    animation-delay: 1s; 
+
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.banner-description {
+    font-size: 1.5em; 
+    margin: 20px 0;
+    font-weight: 300; 
+    animation: fadeInUp 1s ease forwards; 
+    animation-delay: 2s; 
+    font-family: "Unna", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.banner-button {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #22c55e; 
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: pulse 1s infinite; 
+    font-family: "Unna", serif;
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+.banner-button:hover {
+    background-color: #15803d;
+    transform: scale(1.05); 
+}
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 2.5em; 
+    }
+
+    .banner-description {
+        font-size: 1.2em; 
+    }
+
+    .banner-button {
+        font-size: 1em;
+    }
+
+    .banner {
+        height: 300px; 
+    }
+}
+
+
+
