@@ -2,7 +2,7 @@ import React from 'react';
 import './navbar.css';
 import logo from '../Images/logo.d190050ad47a0a0f8b83.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faInfoCircle, faCog, faEnvelope, faBox, faTag, faGift, faStore } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle, faCog, faEnvelope, faLeaf, faFileInvoice, faTaxi, faFileInvoiceDollar, faComments, faLaptopCode, faMobileAlt, faCogs, faBullhorn, faCheckCircle, faStore } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     return (
@@ -17,40 +17,33 @@ const Navbar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            {/* <li className="nav-item">
-                                <a className="nav-link" href="/">
-                                    <FontAwesomeIcon icon={faHome} className="nav-icon" /> Home
-                                </a>
-                            </li> */}
                             <li className="nav-item">
                                 <a className="nav-link" href="/about-us">
                                     <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" /> About Us
                                 </a>
                             </li>
-                         
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <FontAwesomeIcon icon={faStore} className="nav-icon" /> Products
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/">Vetri Fresh</a></li>
-                                    <li><a className="dropdown-item" href="/">Vetri Payslip</a></li>
-                                    <li><a className="dropdown-item" href="/">Vetri Cabs</a></li>
-                                    <li><a className="dropdown-item" href="/">Vetri Invoice</a></li>
-                                    <li><a className="dropdown-item" href="/">Vetri Messaging</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faLeaf} /> Vetri Fresh</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faFileInvoice} /> Vetri Payslip</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faTaxi} /> Vetri Cabs</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faFileInvoiceDollar} /> Vetri Invoice</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faComments} /> Vetri Messaging</a></li>
                                 </ul>
                             </li>
-
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <FontAwesomeIcon icon={faCog} className="nav-icon" /> Services
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/">Web Development</a></li>
-                                    <li><a className="dropdown-item" href="/">Mobile Development</a></li>
-                                    <li><a className="dropdown-item" href="/">Software Development</a></li>
-                                    <li><a className="dropdown-item" href="/">Digital Marketing</a></li>
-                                    <li><a className="dropdown-item" href="/">Software Testing</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faLaptopCode} /> Web Development</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faMobileAlt} /> Mobile Development</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faCogs} /> Software Development</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faBullhorn} /> Digital Marketing</a></li>
+                                    <li><a className="dropdown-item" href="/"><FontAwesomeIcon icon={faCheckCircle} /> Software Testing</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item">

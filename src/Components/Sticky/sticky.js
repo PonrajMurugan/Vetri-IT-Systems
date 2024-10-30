@@ -1,7 +1,17 @@
-import React from 'react';
-import './sticky.css'; 
+import React, { useState, useEffect } from 'react';
+import './sticky.css';
 
 const StickyIcons = () => {
+    const [showUpArrow, setShowUpArrow] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowUpArrow(window.scrollY > 100); 
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -26,7 +36,7 @@ const StickyIcons = () => {
                 <i className="fas fa-phone-alt"></i> 
             </a>
             <button
-                className="icon up-arrow-icon"
+                className={`icon up-arrow-icon ${showUpArrow ? 'visible' : ''}`}
                 onClick={scrollToTop}
             >
                 <i className="fas fa-arrow-up"></i>

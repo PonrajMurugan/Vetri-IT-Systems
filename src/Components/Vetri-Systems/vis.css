@@ -1,29 +1,23 @@
-.vis-container {
+.vis-section {
     text-align: center;
     padding: 20px;
     margin: 0 auto;
     max-width: 900px;
+    margin-top: 50px;
 }
 
-.title-container {
+.vis-title {
     position: relative;
     margin-bottom: 20px;
 }
 
-.title-text {
+.vis-heading {
     font-size: 3rem;
-    /* font-weight: 700; */
-    color: #333;
-    /* margin: 0; */
-    position: relative;
-    /* margin-top: 15px; */
-    color:green;
+    color: green;
     font-family: "Squada One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  animation: slide 2s ease-in-out infinite;
-
-   
+    font-weight: 400;
+    font-style: normal;
+    animation: slide 2s ease-in-out infinite;
 }
 
 @keyframes slide {
@@ -35,7 +29,7 @@
     }
 }
 
-.underline {
+.vis-underline {
     width: 80px;
     height: 4px;
     background-color: #00bfa5; 
@@ -43,39 +37,55 @@
     transition: width 0.4s ease;
 }
 
-.title-container:hover .underline {
+.vis-title:hover .vis-underline {
     width: 120px;
 }
 
-.logo-container {
+.vis-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.vis-item {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px; 
-    margin: 50px 0; 
+    align-items: flex-start;
+    margin: 30px 0;
+    gap: 20px;
 }
 
-.logo-item {
+.vis-description {
+    flex: 1;
+    font-size: 1.3rem;
+    color: black;
+    line-height: 1.8;
+    text-align: justify;
+    font-family: "Unna", serif;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.vis-logo {
     position: relative;
-    width: 500px; 
-    /* overflow: hidden;  */
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
-    transition: transform 0.5s ease-in-out; 
+    flex: 0 0 300px;
+    height: 200px;
 }
 
-.company-logo {
-    width: 100%; 
-    height: auto;
-    transition: transform 0.5s ease-in-out; 
+.vis-image {
+    width: 100%;
+    height:100%;
+    /* object-fit: cover; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
 }
 
-.logo-item:hover .company-logo {
-    /* transform: scale(1.1); */
-    cursor: pointer;
+.vis-image:hover {
+    transform: scale(1.05);
+    filter: blur(2px);
+   
 }
 
-.overlay {
+.vis-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -86,92 +96,88 @@
     justify-content: center;
     align-items: center;
     opacity: 0; 
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    /* transform: translateY(10px); */
-}
-
-.logo-item:hover .overlay {
-    opacity: 1; 
-    /* transform: translateY(0);  */
-    border-radius: 20px;
-    cursor: pointer;
-    
-}
-
-.text {
-    color:#39fe81;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 10px;
-    /* transform: scale(0.8);  */
-    transition: transform 0.5s ease-in-out;
-    font-weight: 700;
-}
-
-.logo-item:hover .text {
-    transform: scale(1);
-     cursor: pointer;
-}
-
-.company-logo {
-    width: 450px;
-    height: 35vh;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 50px;
-    margin-bottom: 30px; */
+    transition: opacity 0.5s ease-in-out;
     border-radius: 10px;
 }
 
-.company-logo:hover {
-    transform: scale(1.1);
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9); */
-    filter: blur(3px);
+.vis-logo:hover .vis-overlay {
+    opacity: 1; 
+    border-radius: 10px;
 }
 
-.content-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.content-text {
-    font-size: 1.3rem;
-    color: black;
-    line-height: 1.8;
-    text-align: justify;
-    /* font-weight: 500; */
-    font-family: "Unna", serif;
+.vis-overlay-text {
+    color: #39fe81;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
     font-weight: 700;
-    font-style: normal;
 }
 
-.arrow-icon {
+.vis-icon {
     color: #00bfa5;
     font-size: 1.5rem;
 }
 
+.vis-highlight {
+    color: orange;
+    font-weight: 700;
+}
 
+.vis-highlight-alt {
+    color: navy;
+    font-weight: 700;
+}
 
-@media (max-width: 768px) {
-    .title-text {
-        font-size: 1.5rem;
+@media (max-width: 1024px) {
+    .vis-heading {
+        font-size: 2.5rem;
     }
 
-    .company-logo {
-        width: 100px;
+    .vis-description {
+        font-size: 1.2rem;
+    }
+
+    .vis-logo {
+        flex: 0 0 250px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vis-heading {
+        font-size: 2rem;
+    }
+
+    .vis-description {
+        font-size: 1.1rem;
+    }
+
+    .vis-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vis-logo {
+        flex: 0 0 200px;
+        height: 150px;
     }
 }
 
 @media (max-width: 576px) {
-    .content-text {
-        font-size: 0.9rem;
+    .vis-heading {
+        font-size: 1.5rem;
     }
 
-    .company-logo {
-        width: 80px;
+    .vis-description {
+        font-size: 1rem;
+    }
+
+    .vis-logo {
+        flex: 0 0 150px;
+        height: 100px;
+    }
+
+    .vis-item {
+        margin: 20px 0;
     }
 }
-
-

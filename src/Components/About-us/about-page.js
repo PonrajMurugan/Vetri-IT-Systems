@@ -4,8 +4,8 @@ import { faCheckCircle, faCode, faBullhorn, faHandsHelping, faLightbulb, faDatab
 import { faAppleAlt, faFileInvoiceDollar, faTaxi, faEnvelope, faTools, faTv } from '@fortawesome/free-solid-svg-icons';
 const AboutPage = () => {
     return (
-        <div data-aos="fade-right" className="about-container" style={{marginTop:"150px"}}>
-        <h1 className="about-title">About Us</h1>
+        <div data-aos="fade-right" className="about-container" style={{marginTop:"90px"}}>
+        <h1 className="about-title cssanimation leWaterWave sequence">About Us</h1>
         
         <div className="about-content">
             <div className="about-text">
@@ -50,6 +50,35 @@ const AboutPage = () => {
                 <li><FontAwesomeIcon icon={faHandsHelping} className="icons"/><span style={{color:"navy" , paddingRight:"10px" , fontWeight:"700"}}> Customer Commitment: </span> We are committed to providing exceptional services and building long-term relationships.</li>
                 <li><FontAwesomeIcon icon={faCode} className="icons"/> <span style={{color:"navy" , paddingRight:"10px" , fontWeight:"700"}}>Quality:</span> We deliver quality in every product and service we offer.</li>
             </ul>
+        </div>
+
+        <div className="team-section">
+            <div className="team-title">
+                <h1>Our Team</h1>
+            </div>
+            <div className="team-container">
+                <div className="team-member">
+                    <div className="team-card">
+                        <img src="https://vetri-it-system.vercel.app/static/media/project-lead.9188cdf541a91520cafe.png" alt="Praveena S" />
+                        <h4>Praveena S</h4>
+                        <h6>VIS Project Manager</h6>
+                    </div>
+                </div>
+                <div className="team-member">
+                    <div className="team-card">
+                        <img src="https://vetri-it-system.vercel.app/static/media/leader-md.c0c1c8a925984988d920.png" alt="Pravin Kumar P" />
+                        <h4>Pravin Kumar P</h4>
+                        <h6>MD & CEO VETRI Companies</h6>
+                    </div>
+                </div>
+                <div className="team-member">
+                    <div className="team-card">
+                        <img src="https://vetri-it-system.vercel.app/static/media/backend-lead.5b776d0c8a0b6ec0590b.png" alt="Maheshwaran S" />
+                        <h4>Maheshwaran S</h4>
+                        <h6>VIS Project Manager</h6>
+                    </div>
+                </div>
+            </div>
         </div>
             
         </div>
